@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>URL Shortener Microservice</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png"
+    />
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>URL Shortener Microservice</h1>
+    </div>    
+    <main>
+      <section>
+        <form action="api/shorturl" method="POST">
+          <fieldset>
+            <legend>URL Shortener</legend>
+            <label for="url_input">URL:</label>
+            <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" />
+            <input type="submit" value="POST URL" />
+          </fieldset>
+        </form>
+      </section>
+      <section>
+        <div class="container">
+          <h3><u>API</u></h3>
+          <p>Returns a shortened version of posted URL.<br/>
+            <br/>Visiting   <url>/api/shorturl/[short_url]</url> </short_url>redirects to the original URL.
+            <br/>
+            <br/>For example, for <strong>https://freecodecamp.org</strong> as posted url, short_url is <strong>3</strong>.
+            <br/><br/>[Base URL]/api/shorturl/<strong>0</strong> redirects to https://freecodecamp.org.  
+          </p>
+          <h3><u>Details</u></h3>
+          <p><code>POST</code>      <url>/api/shorturl</url></p>
+          
+    
+          <div class="contContainer">
+            <div class="codeContainer">
+              <div class="titleCode">Request</div>
+              <div class="innerCode">
+                [Base URL]/api/shorturl
+              </div>
+            </div>
+            <div class="codeContainer">
+              <div class="titleCode">Response</div>
+              <div class="innerCode">
+                { "original_url": 'https://freecodecamp.org', "short_url": 0 }
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+      </section>
+    </main>
+    
+  </body>
+</html>
